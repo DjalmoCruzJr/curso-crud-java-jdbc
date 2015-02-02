@@ -1,4 +1,4 @@
-package br.com.crudjdbc.database.connection;
+package br.com.crudjdbc.database.factories;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
