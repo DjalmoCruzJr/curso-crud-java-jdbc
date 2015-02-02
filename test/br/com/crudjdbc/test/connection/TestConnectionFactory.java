@@ -2,7 +2,7 @@ package br.com.crudjdbc.test.connection;
 
 import org.apache.log4j.Logger;
 
-import br.com.crudjdbc.database.connection.ConnectionFactory;
+import br.com.crudjdbc.database.factories.ConnectionFactory;
 
 
 public abstract class TestConnectionFactory {
@@ -15,7 +15,6 @@ public abstract class TestConnectionFactory {
 	
 	/* Test Main Method */
 	public static void main(String[] args) {
-		testGetConnection();
 		testGetConnection();
 	}
 
