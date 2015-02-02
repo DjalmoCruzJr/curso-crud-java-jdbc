@@ -36,7 +36,7 @@ public class CategoryDao implements ICategoryDao {
 			ps = conn.prepareStatement(INSERT_QUERY);
 			ps.setString(1, category.getName().trim().toUpperCase());
 			ps.executeUpdate();
-			logger.info(String.format("QUERY: ", INSERT_QUERY));
+			logger.info(String.format("QUERY: %s", INSERT_QUERY));
 			logger.info("Record successfully saved.");
 		} catch(Exception e) {
 			logger.error(e);
@@ -54,7 +54,7 @@ public class CategoryDao implements ICategoryDao {
 			conn = ConnectionFactory.getConnection();
 			ps = conn.prepareStatement(FIND_ALl_QUERY);
 			rs = ps.executeQuery();
-			logger.info(String.format("QUERY: ", FIND_ALl_QUERY));
+			logger.info(String.format("QUERY: %s", FIND_ALl_QUERY));
 			if(rs.first())  {
 				categories = new ArrayList<CategoryEntity>();
 				while(rs.next())  {
@@ -82,7 +82,7 @@ public class CategoryDao implements ICategoryDao {
 			conn = ConnectionFactory.getConnection();
 			ps = conn.prepareStatement(FIND_BY_ID_QUERY);
 			rs = ps.executeQuery();
-			logger.info(String.format("QUERY: ", FIND_BY_ID_QUERY));
+			logger.info(String.format("QUERY: %s", FIND_BY_ID_QUERY));
 			if(rs.first())  {
 				category = new CategoryEntity();
 				category.setId(rs.getLong("category_id"));
@@ -106,7 +106,7 @@ public class CategoryDao implements ICategoryDao {
 			ps.setString(1, category.getName().trim().toUpperCase());
 			ps.setLong(2, category.getId());
 			ps.executeUpdate();
-			logger.info(String.format("QUERY: ", UPDATE_QUERY));
+			logger.info(String.format("QUERY: %s", UPDATE_QUERY));
 			logger.info("Record successfully updated.");
 		} catch(Exception e) {
 			logger.error(e);
@@ -123,7 +123,7 @@ public class CategoryDao implements ICategoryDao {
 			ps = conn.prepareStatement(DELETE_QUERY);
 			ps.setLong(1, category.getId());
 			ps.executeUpdate();
-			logger.info(String.format("QUERY: ", DELETE_QUERY));
+			logger.info(String.format("QUERY: %s", DELETE_QUERY));
 			logger.info("Record successfully deleted.");
 		} catch(Exception e) {
 			logger.error(e);
