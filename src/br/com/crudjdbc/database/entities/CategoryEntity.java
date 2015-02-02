@@ -1,4 +1,4 @@
-package br.com.crudjdbc.entities;
+package br.com.crudjdbc.database.entities;
 
 public class CategoryEntity extends BaseEntity {
 
