@@ -1,4 +1,4 @@
-package br.com.crudjdbc.test.connection;
+package br.com.crudjdbc.test.daos;
 
 import org.apache.log4j.Logger;
 
