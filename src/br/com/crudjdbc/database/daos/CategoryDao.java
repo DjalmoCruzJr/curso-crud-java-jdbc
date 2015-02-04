@@ -57,12 +57,12 @@ public class CategoryDao implements ICategoryDao {
 			logger.info(String.format("QUERY: %s", FIND_ALl_QUERY));
 			if(rs.first())  {
 				categories = new ArrayList<CategoryEntity>();
-				while(rs.next())  {
+				do {
 					CategoryEntity category = new CategoryEntity();
 					category.setId(rs.getLong("category_id"));
 					category.setName(rs.getString("category_name"));
 					categories.add(category);
-				}
+				} while(rs.next());
 			}
 			logger.info("Search successfully done.");
 		} catch(Exception e) {
@@ -81,6 +81,7 @@ public class CategoryDao implements ICategoryDao {
 			logger.info("Searching records...");
 			conn = ConnectionFactory.getConnection();
 			ps = conn.prepareStatement(FIND_BY_ID_QUERY);
+			ps.setLong(1, id);
 			rs = ps.executeQuery();
 			logger.info(String.format("QUERY: %s", FIND_BY_ID_QUERY));
 			if(rs.first())  {
