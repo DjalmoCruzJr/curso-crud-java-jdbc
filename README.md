@@ -17,5 +17,4 @@
 <li><strong>Facebook:</strong> <a href="https://www.facebook.com/DjalmoCruzJr">https://www.facebook.com/DjalmoCruzJr</a>;</li>
 <li><strong>Twitter:</strong> <a href="https://twitter.com/DjalmoCruzJr">https://twitter.com/DjalmoCruzJr</a>;</li>
 <li><strong>E-mail(s):</strong> <a href="mailto:djalmo.cruz@gmail.com">djalmo.cruz@gmail.com</a> | <a href="mailto:djalmo.cruz@hotmail.com">djalmo.cruz@hotmail.com</a>;</li>
-<li><strong>Telefone(s):</strong> (87) 8806-5015 | (87) 9612-6614;</li>
 </ul>
